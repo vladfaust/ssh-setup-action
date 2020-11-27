@@ -91,7 +91,7 @@ async function addPrivateKey(sshPath: string, name: string) {
     const privateKeyPath: string = path.join(sshPath, name);
 
     const sshAddOptions: im.ExecOptions = {
-        silent: true,
+        silent: false,
     };
 
     await exec.exec("ssh-add", [privateKeyPath], sshAddOptions);
